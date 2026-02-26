@@ -1,0 +1,78 @@
+@startuml
+
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+
+Table(Users, "Users") {
+  # user_id : INTEGER
+  login : TEXT
+  password : TEXT
+  full_name : TEXT
+  role : TEXT
+}
+
+Table(sqlite_sequence, "sqlite_sequence") {
+  name : 
+  seq : 
+}
+
+Table(Categories, "Categories") {
+  # category_id : INTEGER
+  category_name : TEXT
+}
+
+Table(Manufacturers, "Manufacturers") {
+  # manufacturer_id : INTEGER
+  manufacturer_name : TEXT
+}
+
+Table(Suppliers, "Suppliers") {
+  # supplier_id : INTEGER
+  supplier_name : TEXT
+}
+
+Table(Units, "Units") {
+  # unit_id : INTEGER
+  unit_name : TEXT
+}
+
+Table(Products, "Products") {
+  # product_id : INTEGER
+  product_name : TEXT
+  + category_id : INTEGER
+  description : TEXT
+  + manufacturer_id : INTEGER
+  + supplier_id : INTEGER
+  price : DECIMAL(10,2)
+  + unit_id : INTEGER
+  quantity : INTEGER
+  discount : INTEGER
+  image_path : TEXT
+}
+
+Table(Orders, "Orders") {
+  # order_id : INTEGER
+  order_article : TEXT
+  + user_id : INTEGER
+  status : TEXT
+  pickup_address : TEXT
+  order_date : DATE
+  issue_date : DATE
+}
+
+Table(OrderItems, "OrderItems") {
+  # order_item_id : INTEGER
+  + order_id : INTEGER
+  + product_id : INTEGER
+  quantity : INTEGER
+  price_at_time : DECIMAL(10,2)
+}
+
+Productso--||Units
+Productso--||Suppliers
+Productso--||Manufacturers
+Productso--||Categories
+Orderso--||Users
+OrderItemso--||Products
+OrderItemso--||Orders
+
+@enduml

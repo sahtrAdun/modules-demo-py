@@ -1,0 +1,5 @@
+product_name,category_id,description,manufacturer_id,supplier_id,price,unit_id,quantity,discount,image_path
+Nike Air Max,1,Спортивные кроссовки с амортизацией,1,1,8990.00,1,15,10,images/nike_air_max.jpg
+Adidas Ultraboost,1,Кроссовки для бега,2,2,12990.00,1,8,20,images/adidas_ultraboost.jpg
+Timberland Premium,2,Водонепроницаемые ботинки,3,3,15990.00,2,12,5,images/timberland.jpg
+ECCO Soft,3,Кожаные туфли,4,4,7990.00,2,0,0,images/ecco_soft.jpg

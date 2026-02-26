@@ -1,0 +1,5 @@
+login,password,full_name,role
+admin,admin123,Иванов Иван Иванович,admin
+manager,manager123,Петров Петр Петрович,manager
+client1,client123,Сидорова Анна Сергеевна,client
+client2,client456,Козлов Дмитрий Андреевич,client
